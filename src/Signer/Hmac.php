@@ -20,7 +20,7 @@ abstract class Hmac extends BaseSigner
      */
     public function createHash($payload, Key $key)
     {
-        return hash_hmac($this->getAlgorithm(), $payload, $key->getContent(), true);
+        return hash_hmac($this->getAlgorithm(), $payload, $key->getContent() ?? '', true);
     }
 
     /**
