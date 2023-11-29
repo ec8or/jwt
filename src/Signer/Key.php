@@ -48,7 +48,7 @@ class Key
      */
     private function setContent($content)
     {
-        if (strpos($content ? '', 'file://') === 0) {
+        if (strpos($content ?? '', 'file://') === 0) {
             $content = $this->readFile($content);
         }
 
